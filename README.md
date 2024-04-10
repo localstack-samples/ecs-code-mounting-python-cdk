@@ -15,6 +15,8 @@ The ECS Code Mounting feature allows you to mount code from your host filesystem
 
 The sample code in this repository demonstrates how to use the ECS Code Mounting feature with AWS CDK in Python. The ECS task uses a simple Flask application that returns a simple message. The code is mounted from the host filesystem into the ECS container, and the ECS task is deployed to a LocalStack environment.
 
+![image](images/demo.gif)
+
 ## Prerequisites
 
 - LocalStack Pro with the [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli).
