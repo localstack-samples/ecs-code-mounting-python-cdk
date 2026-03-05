@@ -19,13 +19,14 @@ The sample code in this repository demonstrates how to use the ECS Code Mounting
 
 ## Prerequisites
 
-- LocalStack Pro with the [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli).
+- LocalStack with the [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli).
 - [Cloud Development Kit](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/) with the [`cdklocal`](https://www.npmjs.com/package/aws-cdk-local) installed.
 - [Python 3.9+](https://www.python.org/downloads/) & `pip` package manager.
 - [`virtualenv`](https://pypi.org/project/virtualenv/) for creating isolated Python environments.
 - `cURL` or any other tool to send HTTP requests.
+- A valid [LocalStack for AWS license](https://localstack.cloud/pricing). Your license provides a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/) to activate LocalStack.
 
-Start LocalStack Pro with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
+Start LocalStack with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
 
 ```shell
 export LOCALSTACK_AUTH_TOKEN=<your-auth-token>
