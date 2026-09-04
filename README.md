@@ -19,9 +19,9 @@ The sample code in this repository demonstrates how to use the ECS Code Mounting
 
 ## Prerequisites
 
-- A valid [LocalStack for AWS license](https://localstack.cloud/pricing). Your license provides a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/) to activate LocalStack.
-- [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli).
-- [Cloud Development Kit](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/) with the [`cdklocal`](https://www.npmjs.com/package/aws-cdk-local) installed.
+- A valid [LocalStack for AWS license](https://localstack.cloud/pricing). Your license provides a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/aws/getting-started/auth-token/) to activate LocalStack.
+- [`lstk` CLI](https://docs.localstack.cloud/aws/developer-tools/running-localstack/lstk/) to manage the LocalStack container lifecycle. The AWS CLI is required by `lstk aws`.
+- [Cloud Development Kit](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/) used via the `lstk cdk` proxy.
 - [Python 3.9+](https://www.python.org/downloads/) & `pip` package manager.
 - [`virtualenv`](https://pypi.org/project/virtualenv/) for creating isolated Python environments.
 - `cURL` or any other tool to send HTTP requests.
@@ -30,7 +30,7 @@ Start LocalStack with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
 
 ```shell
 export LOCALSTACK_AUTH_TOKEN=<your-auth-token>
-localstack start
+lstk start
 ```
 
 ## Instructions
@@ -52,13 +52,13 @@ pip install -r requirements.txt
 To bootstrap the CDK, run the following command:
 
 ```shell
-cdklocal bootstrap
+lstk cdk bootstrap
 ```
 
 To deploy the infrastructure, run the following command:
 
 ```shell
-cdklocal deploy
+lstk cdk deploy
 ```
 
 You are expected to see the following output:
@@ -124,7 +124,7 @@ Hello, ECS Code Mounting!
 To clean up the resources, run the following command:
 
 ```shell
-localstack stop
+lstk stop
 ```
 
 ## How do I set up the ECS Code Mounting feature?
