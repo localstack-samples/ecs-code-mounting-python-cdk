@@ -26,4 +26,7 @@ deploy:		## Deploy the CDK stack
 	lstk cdk bootstrap
 	lstk cdk deploy --require-approval never
 
-.PHONY: usage install start stop logs deploy
+test:		## Call the service and check that code changes are picked up live
+	./test.sh
+
+.PHONY: usage install start stop logs deploy test
