@@ -32,6 +32,7 @@ jobs:
         run: |
           npm install -g @localstack/lstk aws-cdk
           cdk --version
+          lstk setup aws --force --non-interactive
 
       - name: Install Python
         uses: actions/setup-python@v4
@@ -58,6 +59,9 @@ jobs:
         run: |
           lstk cdk bootstrap aws://000000000000/us-east-1
           lstk cdk deploy --require-approval never
+
+      - name: Run tests
+        run: make test
 
       - name: Send a Slack notification
         if: failure() || github.event_name != 'pull_request'
